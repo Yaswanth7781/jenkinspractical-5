@@ -3,12 +3,12 @@ pipeline{
     stages {
         stage('build'){
             steps{
-                bat "docker build -t my-app ."
+                sh "docker build -t my-app ."
             }
         }
         stage('run'){
             steps{
-                bat "docker run my-app"
+                sh "docker run my-app"
             }
     
         }
